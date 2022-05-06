@@ -14,8 +14,6 @@
    [goog.object]
    [cljs.reader :refer [read-string]]
 
-   [Lang.seed]
-
    ["react" :as Pacha]
    ["react-dom/client" :as Pacha.dom.client]
    [reagent.core :as Kuzco.core]
@@ -73,30 +71,27 @@
        :defaultSelectedKeys []
        :onClick (fn [event]
                   (js/console.log event))
-       :items [{:label "program"
-                :key "program"
-                :icon nil
-                :children [{:type "group"
-                            :label (Kuzco.core/as-element
-                                    [:div {:style {:cursor "pointer"}
-                                           :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-main-page))} "/"])
-                            #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "game"])
-                            :key "main"
-                            :icon nil}
-                           {:type "group"
-                            :label (Kuzco.core/as-element
-                                    [:div {:style {:cursor "pointer"}
-                                           :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-tournament-page))} "tournament"])
-                            #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "tournament"])
-                            :key "tournament"
-                            :icon nil}
-                           {:type "group"
-                            :label (Kuzco.core/as-element
-                                    [:div {:style {:cursor "pointer"}
-                                           :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-settings-page))} "settings"])
-                            #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "settings"])
-                            :key "settings"
-                            :icon nil}]}]}]
+       :items [{:type "group"
+                :label (Kuzco.core/as-element
+                        [:div {:style {:cursor "pointer"}
+                               :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-main-page))} "/"])
+                #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "game"])
+                :key "main"
+                :icon nil}
+               {:type "group"
+                :label (Kuzco.core/as-element
+                        [:div {:style {:cursor "pointer"}
+                               :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-tournament-page))} "tournament"])
+                #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "tournament"])
+                :key "tournament"
+                :icon nil}
+               {:type "group"
+                :label (Kuzco.core/as-element
+                        [:div {:style {:cursor "pointer"}
+                               :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-settings-page))} "settings"])
+                #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "settings"])
+                :key "settings"
+                :icon nil}]}]
      (when-let [match @matchA]
        [(-> match :data :view) match stateA])]
     #_[:<>
