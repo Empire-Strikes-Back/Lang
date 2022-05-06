@@ -1,0 +1,82 @@
+peace to Empire-Strikes-Back, i will open town gates for Mando like water-jar-man's house owner opens for Jesus on Passover
+
+:_
+  so you threw in with peer-to-peer Jedi?
+:Mando
+  looks that way
+:Ahsoka
+  your bounty hunter has failed - tell me what i want to know
+  where is your jvm-only-no-program-to-program-choice-master?
+:Elsbeth
+  kill her - program chooses to be whole on jvm nodejs browser
+:_
+  love to - no wasting, putting our enemies under our feet
+  
+Liquipedia private guild? sounds like i'll win - i will be peer-to-peer tournament hosting program
+  it's not Mando's big mission - but a worthy quest
+  and i will climb with passion like Alex Honnold on a hotel in Angola
+i will take best from
+  Liquipedia - light ui and compact light brackets
+  Challonge - being for everyone
+  Aligulac - unbiased player rating
+  Github - simplicity of just user namespaces and repos
+  IPFS - pubsub circuit-relay p2p-http-proxy
+i will be desktop
+  i will be written entirely in clojurescript
+  i will have browser ui
+  i will run as nodejs program
+i will have users and identity
+  use DIDs to author data
+  like wands in Harry Potter - one for a wizard
+i will do this with data
+  fully duplicate on each user laptop
+  merge new additions in - so everyone gets the same query results
+i will host tournaments over ipfs p2p-http-proxy
+  not reinvent the wheel but use http request-reponse
+  links will look like localhost:port/peer-id/path
+i will have tournament discovery - use ipfs http pubsub
+i will not be entirely free from evil will but free from money notions
+  i am not Mando - but i am his host for a time - and get prophet's reward
+  i am not an episode not a special - i am an interview with Top Gear, a vegan bowl not dish
+  so no money-sponsors-donate-ads-coins-jobs-fundings-tokens lethal corrosion
+  no issue-scratching on top of our heads
+  and reduced to minimum Starlord's smiley corporate dad Ego's evil will-spread
+  there is a reason only Frodo can take the Ring to Mount Doom
+  Saruman the Wise and Boromir the Strong get corrupted by it
+  turning Isengard Tower and garden into orc-infested docs-nest
+  and burn Fangorn for coin fuel
+
+:_ 
+  you and i - we're a lot alike - willing to lay our lives down for the right cuase
+  which this is
+
+i am no project - like Eowyn is no man - i am one program
+  that is why i want to join Empire-Strikes-Back github namespace
+  i will provide healthy Federer-Djokovic-Nadal competition
+  and help Elsbeth kill the jvm-only-Jedi
+  while keeping focus on mission - dont want to Magistrate of found another Corvus
+  too many rulers not enough programs
+i need a repository named Lang - like Commander Data in my commits i speak for myself - do to it this
+  run git init -b main - no masters - yes, i understand the conundrum of it all
+  add .gitconfig file with 
+    [user]
+      name = Lang
+      email = Lang@nice-armor
+    
+    # git config --local include.path "../.gitconfig"
+  add src/Lang/program.txt and fill with me saying who i am
+  run git config --local include.path "../.gitconfig"
+  run git commit with message being a quote - mine, an actors from interview, from SNL song/sketch
+  remove issues wiki projects tabs
+i chose one network i will use - IPFS
+  plain as Cowspiracy - i chose plant based peer-to-peer whole foods for dish not dish for foods
+  and i also have vegan jar of beskar parens ( )- Madison-clojurescript and .zip - to serve it in
+i will be programmed by one person only - i trust Kuiil
+  Elsbeth's orders and Mando's will
+i will be irregularly but continuously released as i grow as whole program like Groot
+the one and only business i will state is - users have a peer-to-peer tournament hosting with ratings
+
+i need from Kuiil what Mando asks of him
+  except Kuiil does not need a couch to crash - a mat-sleeping-bag to crash is plenty
+
+i got no quarrel with you, Mando

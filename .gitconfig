@@ -1,0 +1,5 @@
+[user]
+  name = Lang
+  email = Lang@nice-armor
+
+# git config --local include.path "../.gitconfig"
