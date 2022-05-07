@@ -162,7 +162,7 @@
                               :host "0.0.0.0"})
     (println ":_ what is this thing?")
     (println ":Mando i keep it around for luck")
-    (println (format ":_ you're gonna needed where you're headed - to http://localhost:%s" port))))
+    (println (format ":_ you're gonna need it where you're headed - to http://localhost:%s" port))))
 
 (defn -main
   [& args]

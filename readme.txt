@@ -1,3 +1,3 @@
 :_ what is this thing?
 :Mando i keep it around for luck
-:_ you're gonna needed where you're headed
+:_ you're gonna need it where you're headed
