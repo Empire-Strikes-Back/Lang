@@ -73,9 +73,9 @@
       [:> ThemeSongGuyLayout
        [:> ThemeSongGuyMenu
         {:mode "horizontal"
-         :size "small"
+         :size "large"
          :selectedKeys [route-key]
-         :items [{:type "group"
+         :items [{:type "item"
                   :label
                   #_(Kuzco.core/as-element
                      [:div {:style {:cursor "pointer"}
@@ -83,7 +83,7 @@
                   (Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "program"])
                   :key :rc-main-page
                   :icon nil}
-                 {:type "group"
+                 {:type "item"
                   :label
                   #_(Kuzco.core/as-element
                      [:div {:style {:cursor "pointer"}
@@ -91,7 +91,7 @@
                   (Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-tournament-page)} "tournament"])
                   :key :rc-tournament-page
                   :icon nil}
-                 {:type "group"
+                 {:type "item"
                   :label
                   #_(Kuzco.core/as-element
                      [:div {:style {:cursor "pointer"}
