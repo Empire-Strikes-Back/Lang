@@ -36,8 +36,8 @@
     #_(set! (.-innerHTML (.getElementById js/document "ui"))
             "you're gonna need it where you're headed")
     (Lang.bananas/ui-process {:Pacha-dom-root Pacha-dom-root
-                               :matchA matchA
-                               :stateA stateA})))
+                              :matchA matchA
+                              :stateA stateA})))
 
 (defn reload
   []

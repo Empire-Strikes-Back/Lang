@@ -19,4 +19,4 @@
                     #_Yzma
                     metosin/reitit {:mvn/version "0.5.18"}
                     metosin/reitit-spec {:mvn/version "0.5.18"}
-                    metosin/reitit-frontend {:mvn/version "0.5.18"}}}}}
+                    metosin/reitit-frontend {:mvn/version "0.5.18"} #_{:local/root "../Yzma/modules/reitit-frontend"}}}}}
