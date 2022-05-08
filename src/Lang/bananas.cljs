@@ -14,6 +14,8 @@
    [goog.object]
    [cljs.reader :refer [read-string]]
 
+   [Lang.seed]
+
    ["react" :as Pacha]
    ["react-dom/client" :as Pacha.dom.client]
    [reagent.core :as Kuzco.core]
@@ -74,7 +76,7 @@
        :items [{:type "group"
                 :label (Kuzco.core/as-element
                         [:div {:style {:cursor "pointer"}
-                               :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-main-page))} "/"])
+                               :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-main-page))} "program"])
                 #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "game"])
                 :key "main"
                 :icon nil}
@@ -91,7 +93,11 @@
                                :onClick (fn [_] (Yzma.frontend.easy/push-state :rc-settings-page))} "settings"])
                 #_(Kuzco.core/as-element [:a {:href (Yzma.frontend.easy/href :rc-main-page)} "settings"])
                 :key "settings"
-                :icon nil}]}]
+                :icon nil}]
+       #_[{:label "program"
+           :key "program"
+           :icon nil
+           :children []}]}]
      (when-let [match @matchA]
        [(-> match :data :view) match stateA])]
     #_[:<>
