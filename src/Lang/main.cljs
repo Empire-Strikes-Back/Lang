@@ -33,8 +33,15 @@
 
 (defonce ^:const PORT 3301)
 (def server (express))
+(def api (express.Router.))
+
+(.get api "/Little-Rock" (fn [request response]
+                           (go
+                             (<! (timeout 1000))
+                             (.send response (str {})))))
 
 (.use server (.static express "ui"))
+(.use server "/api" api)
 
 (.get server "*" (fn [request response]
                    (.sendFile response (.join path js/__dirname  "ui" "index.html"))))
@@ -42,8 +49,7 @@
 (defn -main []
   (go
     (let [complete| (chan 1)]
-      (.listen server PORT
-               (fn [] (put! complete| true)))
+      (.listen server PORT (fn [] (put! complete| true)))
       (<! complete|)
       (println ":_ what is this thing?")
       (println ":Mando i keep it around for luck")
@@ -57,7 +63,7 @@
                       (.createInstance
                        OrbitDB ipfs
                        (clj->js
-                        {"directory" (.join path (.homedir os) "Elsbeth" "orbitdb")}))
+                        {"directory" (.join path (.homedir os) ".Elsbeth" "orbitdb")}))
                       (.catch (fn [ex]
                                 (println ex)))))]
         (println (.. orbitdb -identity -id))))))
