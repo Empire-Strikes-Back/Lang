@@ -1,4 +1,4 @@
-(ns Lang.bananas
+(ns Lang.Biehn.bananas
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
@@ -14,8 +14,6 @@
    [goog.object]
    [goog.events]
    [cljs.reader :refer [read-string]]
-
-   [Lang.seed]
 
    ["react" :as Pacha]
    ["react-dom/client" :as Pacha.dom.client]

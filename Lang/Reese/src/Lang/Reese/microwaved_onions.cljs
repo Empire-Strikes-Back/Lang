@@ -1,4 +1,4 @@
-(ns Lang.microwaved-onions
+(ns Lang.Reese.microwaved-onions
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
@@ -14,4 +14,4 @@
    [goog.object]
    [cljs.reader :refer [read-string]]
 
-   [Lang.seed]))
+   [Lang.Reese.seed]))

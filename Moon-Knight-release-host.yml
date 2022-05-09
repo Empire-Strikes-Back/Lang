@@ -1,0 +1,45 @@
+version: "3.9"
+
+volumes:
+   ipfs:
+
+services:
+
+  Reese:
+    image: lang/reese
+    build:
+      context: ./Lang/Reese
+      dockerfile: release.Dockerfile
+    ports:
+      - 3311:8080
+    depends_on:
+      - Sarah-Connor
+
+  Biehn:
+    image: lang/biehn
+    build:
+      context: ./Lang/Biehn
+      dockerfile: release.Dockerfile
+    ports:
+      - 3312:80
+
+  Sarah-Connor:
+    image: ipfs/go-ipfs:v0.12.2
+    volumes:
+      - ipfs:/data/ipfs
+
+  Boen:
+    image: mariadb
+    command: --max-allowed-packet=256M
+    environment:
+      MYSQL_DATABASE: wikipedia
+      MYSQL_USER: wikipedia
+      MYSQL_PASSWORD: wikipedia
+      MYSQL_ROOT_PASSWORD: wikipedia
+
+  Silberman:
+    image: mediawiki
+    ports:
+      - 8000:80
+    depends_on:
+      - Boen

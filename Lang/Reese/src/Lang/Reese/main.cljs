@@ -1,4 +1,4 @@
-(ns Lang.main
+(ns Lang.Reese.main
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
@@ -14,12 +14,11 @@
    [goog.object]
    [cljs.reader :refer [read-string]]
 
-   [Lang.drawing]
-   [Lang.seed]
-   [Lang.dates]
-   [Lang.microwaved-onions]
-   [Lang.corn]
-   [Lang.beans]))
+   [Lang.Reese.seed]
+   [Lang.Reese.microwaved-onions]
+   [Lang.Reese.salt]
+   [Lang.Reese.corn]
+   [Lang.Reese.beans]))
 
 (defonce os (js/require "os"))
 (defonce fs (js/require "fs"))
@@ -31,7 +30,7 @@
 
 (set! (.-AbortController js/global) AbortController)
 
-(defonce ^:const PORT 3301)
+(defonce ^:const PORT 8080)
 (def server (express))
 (def api (express.Router.))
 
@@ -57,7 +56,7 @@
       (println "i dont want my next job")
       (println "Kuiil has spoken")
 
-      (let [ipfs (.create IPFSHttpClient "http://127.0.0.1:5001")
+      (let [ipfs (.create IPFSHttpClient "http://Sarah-Connor:5001")
             orbitdb (<p!
                      (->
                       (.createInstance

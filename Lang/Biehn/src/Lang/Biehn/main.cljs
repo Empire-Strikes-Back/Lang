@@ -1,4 +1,4 @@
-(ns Lang.ui
+(ns Lang.Biehn.main
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
@@ -18,8 +18,9 @@
    ["react-dom/client" :as Pacha.dom.client]
    [reagent.core :as Kuzco.core]
 
-   [Lang.sunflower-seeds]
-   [Lang.bananas]))
+   [Lang.Biehn.dates]
+   [Lang.Biehn.sunflower-seeds]
+   [Lang.Biehn.bananas]))
 
 (defonce matchA (Kuzco.core/atom nil))
 (defonce stateA (Kuzco.core/atom {}))
@@ -35,9 +36,9 @@
     (println ":Madison oh my God, no - i dont even eat meat - i'm a vegatarian - vegan actually")
     #_(set! (.-innerHTML (.getElementById js/document "ui"))
             "you're gonna need it where you're headed")
-    (Lang.bananas/ui-process {:Pacha-dom-root Pacha-dom-root
-                              :matchA matchA
-                              :stateA stateA})))
+    (Lang.Biehn.bananas/ui-process {:Pacha-dom-root Pacha-dom-root
+                                    :matchA matchA
+                                    :stateA stateA})))
 
 (defn reload
   []
