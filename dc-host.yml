@@ -22,9 +22,9 @@ services:
       - 3312:80
 
   Sarah-Connor:
-    image: lang/michael
+    image: lang/Sarah-Connor
     build:
-      context: ./Lang/Michael
+      context: ./Lang/Sarah-Connor
     volumes:
       - ipfs:/data/ipfs
 

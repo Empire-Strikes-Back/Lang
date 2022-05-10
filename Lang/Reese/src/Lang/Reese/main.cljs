@@ -39,10 +39,10 @@
                              (<! (timeout 1000))
                              (.send response (str {})))))
 
-(.use server (.static express "ui"))
+#_(.use server (.static express "ui"))
 (.use server "/api" api)
 
-(.get server "*" (fn [request response]
+#_(.get server "*" (fn [request response]
                    (.sendFile response (.join path js/__dirname  "ui" "index.html"))))
 
 (defn -main []

@@ -15,7 +15,7 @@ WORKDIR /avatar
 COPY package.json .
 RUN npm i
 COPY deps.edn .
-RUN clojure -Stree
+RUN clojure -A:Moana -Stree
 COPY . .
 RUN bash avatar.sh release
 
