@@ -9,7 +9,6 @@ services:
     image: lang/reese
     build:
       context: ./Lang/Reese
-      dockerfile: Dockerfile
     ports:
       - 3311:8080
     depends_on:
@@ -19,12 +18,13 @@ services:
     image: lang/biehn
     build:
       context: ./Lang/Biehn
-      dockerfile: Dockerfile
     ports:
       - 3312:80
 
   Sarah-Connor:
-    image: ipfs/go-ipfs:v0.12.2
+    image: lang/michael
+    build:
+      context: ./Lang/Michael
     volumes:
       - ipfs:/data/ipfs
 
