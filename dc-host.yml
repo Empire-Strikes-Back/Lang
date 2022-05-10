@@ -9,7 +9,7 @@ services:
     image: lang/reese
     build:
       context: ./Lang/Reese
-      dockerfile: release.Dockerfile
+      dockerfile: Dockerfile
     ports:
       - 3311:8080
     depends_on:
@@ -19,7 +19,7 @@ services:
     image: lang/biehn
     build:
       context: ./Lang/Biehn
-      dockerfile: release.Dockerfile
+      dockerfile: Dockerfile
     ports:
       - 3312:80
 
