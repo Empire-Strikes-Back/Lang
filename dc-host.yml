@@ -1,7 +1,10 @@
 version: "3.9"
 
 volumes:
-   ipfs:
+   sarah-connor:
+   boen:
+  #  silberman-images:
+
 
 services:
 
@@ -15,11 +18,11 @@ services:
       - Sarah-Connor
 
   Sarah-Connor:
-    image: lang/Sarah-Connor
+    image: lang/sarah-connor
     build:
       context: ./Lang/Sarah-Connor
     volumes:
-      - ipfs:/data/ipfs
+      - sarah-connor:/data/ipfs
 
   Boen:
     image: mariadb
@@ -29,10 +32,22 @@ services:
       MYSQL_USER: wikipedia
       MYSQL_PASSWORD: wikipedia
       MYSQL_ROOT_PASSWORD: wikipedia
+    volumes:
+      - boen:/var/lib/mysql
 
   Silberman:
-    image: mediawiki
+    image: lang/silberman
+    build:
+      context: ./Lang/Silberman
     ports:
       - 8000:80
     depends_on:
       - Boen
+    links:
+      - Boen
+    # volumes:
+    #   - silberman-images:/var/www/html/images
+    #   - ./Lang/Silberman/LocalSettings.php:/var/www/html/LocalSettings.php
+    #   - ./Lang/Silberman/extensions/TemplateStyles:/var/www/html/extensions/TemplateStyles
+    #   - ./Lang/Silberman/extensions/Scribunto:/var/www/html/extensions/Scribunto
+    #   - ./Lang/Silberman/php.ini:/usr/local/etc/php/conf.d/mediawiki.ini
