@@ -44,3 +44,4 @@ RUN git clone --depth 1 -b $MEDIAWIKI_BRANCH \
 
 COPY php.ini /usr/local/etc/php/conf.d/mediawiki.ini
 # COPY LocalSettings.php /var/www/html/LocalSettings.php
+COPY *.php /var/www/html/
