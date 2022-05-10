@@ -14,13 +14,6 @@ services:
     depends_on:
       - Sarah-Connor
 
-  Biehn:
-    image: lang/biehn
-    build:
-      context: ./Lang/Biehn
-    ports:
-      - 3312:80
-
   Sarah-Connor:
     image: lang/Sarah-Connor
     build:
