@@ -3,7 +3,6 @@ version: "3.9"
 volumes:
    sarah-connor:
    thrain:
-   the-broker:
   #  silberman-images:
 
 
@@ -52,20 +51,3 @@ services:
     #   - ./Lang/Silberman/extensions/TemplateStyles:/var/www/html/extensions/TemplateStyles
     #   - ./Lang/Silberman/extensions/Scribunto:/var/www/html/extensions/Scribunto
     #   - ./Lang/Silberman/php.ini:/usr/local/etc/php/conf.d/mediawiki.ini
-
-  # The-Broker:
-  #   image: postgres
-  #   volumes:
-  #     - the-broker:/var/lib/postgresql/data
-  #   environment:
-  #     - POSTGRES_DB=postgres
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=postgres
-  #   ports:
-  #     - 5432:5432
-
-  # Fadlan:
-  #   image: lang/fadlan
-  #   build:
-  #     context: ./Lang/Fadlan
-      
