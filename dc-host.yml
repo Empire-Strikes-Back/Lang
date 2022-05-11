@@ -2,7 +2,7 @@ version: "3.9"
 
 volumes:
    sarah-connor:
-   thrain:
+   boen:
   #  silberman-images:
 
 
@@ -33,7 +33,7 @@ services:
       MYSQL_PASSWORD: wikipedia
       MYSQL_ROOT_PASSWORD: wikipedia
     volumes:
-      - thrain:/var/lib/mysql
+      - boen:/var/lib/mysql
 
   Silberman:
     image: lang/silberman
