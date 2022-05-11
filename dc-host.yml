@@ -2,7 +2,8 @@ version: "3.9"
 
 volumes:
    sarah-connor:
-   boen:
+   thrain:
+   the-broker:
   #  silberman-images:
 
 
@@ -12,8 +13,8 @@ services:
     image: lang/reese
     build:
       context: ./Lang/Reese
-    ports:
-      - 3311:8080
+    # ports:
+    #   - 3311:8080
     depends_on:
       - Sarah-Connor
 
@@ -24,7 +25,7 @@ services:
     volumes:
       - sarah-connor:/data/ipfs
 
-  Boen:
+  Thrain:
     image: mariadb
     command: --max-allowed-packet=256M
     environment:
@@ -33,21 +34,38 @@ services:
       MYSQL_PASSWORD: wikipedia
       MYSQL_ROOT_PASSWORD: wikipedia
     volumes:
-      - boen:/var/lib/mysql
+      - thrain:/var/lib/mysql
 
   Silberman:
     image: lang/silberman
     build:
       context: ./Lang/Silberman
-    ports:
-      - 8000:80
+    # ports:
+    #   - 8000:80
     depends_on:
-      - Boen
+      - Thrain
     links:
-      - Boen
+      - Thrain
     # volumes:
     #   - silberman-images:/var/www/html/images
     #   - ./Lang/Silberman/LocalSettings.php:/var/www/html/LocalSettings.php
     #   - ./Lang/Silberman/extensions/TemplateStyles:/var/www/html/extensions/TemplateStyles
     #   - ./Lang/Silberman/extensions/Scribunto:/var/www/html/extensions/Scribunto
     #   - ./Lang/Silberman/php.ini:/usr/local/etc/php/conf.d/mediawiki.ini
+
+  # The-Broker:
+  #   image: postgres
+  #   volumes:
+  #     - the-broker:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #   ports:
+  #     - 5432:5432
+
+  # Fadlan:
+  #   image: lang/fadlan
+  #   build:
+  #     context: ./Lang/Fadlan
+      
