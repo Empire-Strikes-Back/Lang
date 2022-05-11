@@ -39,8 +39,8 @@ services:
     image: lang/silberman
     build:
       context: ./Lang/Silberman
-    # ports:
-    #   - 8000:80
+    ports:
+      - 8000:80
     depends_on:
       - Thrain
     links:
