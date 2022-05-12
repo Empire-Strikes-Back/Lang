@@ -1,4 +1,4 @@
-(ns Lang.Reese.main
+(ns Lang.main
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
@@ -14,11 +14,12 @@
    [goog.object]
    [cljs.reader :refer [read-string]]
 
-   [Lang.Reese.seed]
-   [Lang.Reese.microwaved-onions]
-   [Lang.Reese.salt]
-   [Lang.Reese.corn]
-   [Lang.Reese.beans]))
+   [Lang.drawing]
+   [Lang.seed]
+   [Lang.dates]
+   [Lang.microwaved-onions]
+   [Lang.corn]
+   [Lang.beans]))
 
 (defonce os (js/require "os"))
 (defonce fs (js/require "fs"))
@@ -30,7 +31,7 @@
 
 (set! (.-AbortController js/global) AbortController)
 
-(defonce ^:const PORT 8080)
+(defonce ^:const PORT 3301)
 (def server (express))
 (def api (express.Router.))
 
@@ -39,10 +40,10 @@
                              (<! (timeout 1000))
                              (.send response (str {})))))
 
-#_(.use server (.static express "ui"))
+(.use server (.static express "ui"))
 (.use server "/api" api)
 
-#_(.get server "*" (fn [request response]
+(.get server "*" (fn [request response]
                    (.sendFile response (.join path js/__dirname  "ui" "index.html"))))
 
 (defn -main []
@@ -56,7 +57,7 @@
       (println "i dont want my next job")
       (println "Kuiil has spoken")
 
-      (let [ipfs (.create IPFSHttpClient "http://Sarah-Connor:5001")
+      (let [ipfs (.create IPFSHttpClient "http://127.0.0.1:5001")
             orbitdb (<p!
                      (->
                       (.createInstance

@@ -1,4 +1,4 @@
-(ns Lang.Reese.corn
+(ns Lang.salt
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
@@ -12,6 +12,4 @@
    [goog.string.format :as format]
    [goog.string :refer [format]]
    [goog.object]
-   [cljs.reader :refer [read-string]]
-
-   [Lang.Reese.seed]))
+   [cljs.reader :refer [read-string]]))

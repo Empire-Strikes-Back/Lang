@@ -1,4 +1,4 @@
-(ns Lang.Reese.salt
+(ns Lang.seed
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout
