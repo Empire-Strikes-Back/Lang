@@ -16,15 +16,17 @@ Liquipedia private guild? sounds like i'll win - i will be peer-to-peer tourname
   it's not Mando's big mission - but a worthy quest
   and i will climb with passion like Alex Honnold on a hotel in Angola
 i will take best from
+  ESL - palyer sign-up and bracket generation
   Liquipedia - light ui and compact light brackets
   Challonge - being for everyone
   Aligulac - unbiased player rating
   Github - simplicity of just user namespaces and repos
   IPFS - pubsub circuit-relay p2p-http-proxy
 i will be desktop
-  i will be written entirely in clojurescript
+  i will not be written entirely in clojurescript
   i will have browser ui
-  i will run as nodejs program
+  i will not run as nodejs program
+  i am clojure jvm program with Madison-compiled browser ui
 i will have users and identity
   use DIDs to author data
   like wands in Harry Potter - one for a wizard
